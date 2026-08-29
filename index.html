@@ -1,341 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Abdelrahman Rafiq - Computer & Communications Engineering Student and Data Science Practitioner.">
-  <title>Abdelrahman Rafiq | Systems & Data Science Portfolio</title>
-  
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  
-  <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Portfolio of Abdelrahman Rafiq - Computer & Communications Engineering Student & Data Science Specialist" />
+    <title>Abdelrahman Rafiq | Data Science & Engineering Portfolio</title>
+
+    <!-- Google Fonts: Space Grotesk & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo">&lt;Abdelrahman /&gt;</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#achievements">Achievements</a></li>
-        <li><a href="#contact" class="btn-nav">Contact</a></li>
-      </ul>
-      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section id="hero" class="hero-section">
-    <div class="hero-content">
-      <p class="hero-subtitle">Hi, my name is</p>
-      <h1 class="hero-title">Abdelrahman Rafiq.</h1>
-      <h2 class="hero-tagline">Building data science pipelines on a foundation of low-level systems mastery.</h2>
-      <p class="hero-description">
-        Second-year Computer & Communications Engineering student at Alexandria University (3.99 GPA). Specializing in Data Science, Machine Learning, and Systems Engineering.
-      </p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">View My Work</a>
-        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Me Section -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="section-title"><span class="title-number">01.</span> About Me</h2>
-      <div class="about-card">
-        <p>Real innovation comes from mastering core CS concepts, not just wielding high-level tools. Frameworks and libraries change; a deep understanding of how computation actually works doesn't.</p>
-        <p>I built that foundation through rigorous work in C, probability & statistics, and Harvard's CS50 — backed by a HackerRank Gold Medal in C. But theory only means something when it's tested under pressure. As a control systems engineer on our Robo-Tech team, I helped design and troubleshoot real systems in competition, finishing 4th at the MATE 2026 Regional.</p>
-        <p>Now I'm bringing that same fundamentals-first approach to data science through the DEPI Data Science track and AWS Academy — having completed AWS Cloud Foundations and ML Foundations — with the goal of becoming a well-rounded data scientist who can own the full pipeline, from data engineering through applied machine learning.</p>
-        <p>I'm not chasing tools. I'm building the depth that makes any tool easier to pick up.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="section bg-alt">
-    <div class="container">
-      <h2 class="section-title"><span class="title-number">02.</span> Skills & Core Competencies</h2>
-      
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h3><i class="fa-solid fa-code"></i> Programming Languages</h3>
-          <div class="tag-cloud">
-            <span class="tag">C</span>
-            <span class="tag">C++</span>
-            <span class="tag">Python 3</span>
-          </div>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="nav-logo">AR<span>.</span></a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#contact" class="btn btn-outline-nav">Contact</a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
+    </header>
 
-        <div class="skill-category">
-          <h3><i class="fa-solid fa-gears"></i> Systems & Infrastructure</h3>
-          <div class="tag-cloud">
-            <span class="tag">Systems Programming</span>
-            <span class="tag">Sockets & Networking</span>
-            <span class="tag">POSIX Threads</span>
-            <span class="tag">PID Control Systems</span>
-            <span class="tag">AWS Cloud</span>
-            <span class="tag">Git & GitHub</span>
-          </div>
-        </div>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge"><i class="fa-solid fa-code-branch"></i> Systems Programming &amp; Data Science
+                    </div>
 
-        <div class="skill-category">
-          <h3><i class="fa-solid fa-brain"></i> Data Science & Foundations</h3>
-          <div class="tag-cloud">
-            <span class="tag">Data Analysis Pipelines</span>
-            <span class="tag">Machine Learning Workflows</span>
-            <span class="tag">Probability & Statistics</span>
-            <span class="tag">Algorithms & Data Structures</span>
-            <span class="tag">Competitive Programming</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+                    <h1 class="hero-title">Abdelrahman Rafiq.</h1>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2 class="section-title"><span class="title-number">03.</span> Projects & Work</h2>
-      
-      <div class="projects-grid">
-        <!-- Project 1 -->
-        <article class="project-card">
-          <div class="project-header">
-            <i class="fa-regular fa-folder-open project-icon"></i>
-            <div class="project-links">
-              <a href="https://github.com/Abdelrahman-Rafiq/The-Simple-Server" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
-                <i class="fa-brands fa-github"></i>
-              </a>
+                    <div class="hero-subtitle">
+                        <span>Second-Year Computer &amp; Communications Engineer</span>
+                        <span class="dot-separator">•</span>
+                        <span>GPA: 3.99 / 4.0</span>
+                    </div>
+
+                    <!-- <h2 class="hero-tagline">Building a fundamentals-first bridge from low-level systems programming to end-to-end Data Science and Machine Learning.</h2> -->
+                    <p class="hero-description">
+                        Building a fundamentals-first bridge from low-level systems programming to end-to-end Data
+                        Science and Machine Learning.
+                    </p>
+
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-briefcase"></i> View My
+                            Work</a>
+                        <!-- Resume Link -->
+                        <a href="https://drive.google.com/file/d/1b_Euy8Q94Kjh1lFeztneo9xSxYIZsNEy/view?usp=sharing"
+                            target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i
+                                class="fa-solid fa-file-pdf"></i> Resume</a>
+                        <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+                    </div>
+                </div>
             </div>
-          </div>
-          <h3 class="project-title">The Simple Server - Concurrent HTTP/1.1 Web Server in C</h3>
-          <p class="project-description">
-            A concurrent HTTP/1.1 web server in C using POSIX Threads and BSD Sockets. Features a multi-threaded pool handling 50+ concurrent clients, an in-memory byte-bounded LRU cache, and a CGI execution engine using fork/exec and pipes. Memory safety validated via Valgrind.
-          </p>
-          <ul class="project-tech">
-            <li>C</li>
-            <li>POSIX Threads</li>
-            <li>BSD Sockets</li>
-            <li>Valgrind</li>
-            <li>LRU Cache</li>
-          </ul>
-        </article>
+        </section>
 
-        <!-- Project 2 -->
-        <article class="project-card">
-          <div class="project-header">
-            <i class="fa-regular fa-folder-open project-icon"></i>
-            <div class="project-links">
-              <a href="https://github.com/Abdelrahman-Rafiq" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
-                <i class="fa-brands fa-github"></i>
-              </a>
+        <!-- About Me Section -->
+        <!-- About Me Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About <span>Me</span></h2>
+
+                <div class="about-wrapper">
+                    <!-- Profile Photo -->
+                    <div class="about-image-container">
+                        <img src="assets/profile.jpg" alt="Abdelrahman Rafiq" class="about-image">
+                    </div>
+
+                    <!-- Bio Card -->
+                    <div class="about-card">
+                        <p>
+                            Real innovation comes from mastering core CS concepts, not just wielding high-level tools.
+                            Frameworks and libraries change; a deep understanding of how computation actually works
+                            doesn't.
+                        </p>
+                        <p>
+                            I built that foundation through rigorous work in C, probability &amp; statistics, and
+                            Harvard's CS50 — backed by a HackerRank Gold Medal in C. But theory only means something
+                            when it's tested under pressure. As a control systems engineer on our Robo-Tech team, I
+                            helped design and troubleshoot real systems in competition, finishing 4th at the MATE 2026
+                            Regional[cite: 1].
+                        </p>
+                        <p>
+                            Now I'm bringing that same fundamentals-first approach to data science through the DEPI Data
+                            Science track and AWS Academy — having completed AWS Cloud Foundations and ML
+                            Foundations[cite: 1] — with the goal of becoming a well-rounded data scientist who can own
+                            the full pipeline, from data engineering through applied machine learning.
+                        </p>
+                        <p>
+                            I'm not chasing tools. I'm building the depth that makes any tool easier to pick up.
+                        </p>
+                    </div>
+                </div>
+
             </div>
-          </div>
-          <h3 class="project-title">ROV Control Systems & Stability Software</h3>
-          <p class="project-description">
-            Architected underwater ROV control systems utilizing Python, Raspberry Pi, and GPIO interfaces for the MATE ROV Regional competition. Developed real-time motor control and PID feedback algorithms using sensor fusion, alongside automated safety shutdown protocols.
-          </p>
-          <ul class="project-tech">
-            <li>Python</li>
-            <li>Raspberry Pi</li>
-            <li>PID Control</li>
-            <li>GPIO Interfaces</li>
-            <li>Sensor Fusion</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
+        </section>
 
-  <!-- Education & Certifications -->
-  <section id="education" class="section bg-alt">
-    <div class="container">
-      <h2 class="section-title"><span class="title-number">04.</span> Education & Certifications</h2>
-      
-      <div class="timeline">
-        <!-- Degree -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">2024 - 2028</span>
-            <h3>B.Sc. in Computer & Communications Engineering</h3>
-            <h4>Faculty of Engineering, Alexandria University</h4>
-            <p class="gpa-badge">GPA: 3.99 / 4.0</p>
-            <p><strong>Core Competencies:</strong> Systems Programming, Control Theory, Algorithms & Data Structures, Applied Statistics</p>
-          </div>
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <div class="container">
+                <h2 class="section-title"><span>Education</span> &amp; Certifications</h2>
+
+                <div class="timeline">
+                    <!-- Degree -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="date">2024 - 2028</span>
+                            <h3>B.Sc. in Computer &amp; Communications Engineering</h3>
+                            <h4>Faculty of Engineering, Alexandria University | Alexandria, Egypt</h4>
+                            <p><strong>GPA:</strong> 3.99 / 4.0</p>
+                            <p class="desc"><strong>Core Competencies:</strong> Systems Programming, Control Theory,
+                                Algorithms & Data Structures, Applied Statistics.</p>
+                        </div>
+                    </div>
+
+                    <!-- DEPI Data Science Track -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="date">In Progress</span>
+                            <h3>DEPI Data Science Track</h3>
+                            <h4>Digital Egypt Pioneers Initiative</h4>
+                            <p class="desc">Practical machine learning workflows, data analysis pipelines, and applied
+                                statistics models for engineering applications.</p>
+                        </div>
+                    </div>
+
+                    <!-- CS50 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="date">2026</span>
+                            <h3>CS50: Introduction to Computer Science</h3>
+                            <h4>Harvard / edX</h4>
+                            <p class="desc">Core computer science fundamentals, memory management, algorithms, and data
+                                structures. Built a fully concurrent C web server as a final project.</p>
+                        </div>
+                    </div>
+
+                    <!-- AWS ML Foundations -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="date">2026</span>
+                            <h3>Machine Learning Foundations</h3>
+                            <h4>Amazon Web Services (AWS)</h4>
+                            <p class="desc">Practical machine learning concepts, data preprocessing, model training
+                                workflows, and deployment on AWS infrastructure.</p>
+                        </div>
+                    </div>
+
+                    <!-- AWS Cloud Foundations -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="date">2026</span>
+                            <h3>AWS Cloud Foundations</h3>
+                            <h4>Amazon Web Services (AWS)</h4>
+                            <p class="desc">Fundamentals of cloud architecture, core AWS infrastructure services,
+                                security practices, and cloud deployment models.</p>
+                        </div>
+                    </div>
+
+                    <!-- Probability & Statistics -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="date">2025</span>
+                            <h3>Probability &amp; Statistics 1</h3>
+                            <h4>Arabsera</h4>
+                            <p class="desc">Mathematical foundations of probability distributions, statistical
+                                inference, and hypothesis testing for ML models.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Technical <span>Skills</span></h2>
+                <div class="skills-grid">
+
+                    <div class="skill-category">
+                        <h3><i class="fa-solid fa-code"></i> Languages</h3>
+                        <div class="tag-cloud">
+                            <span class="tag">C (HackerRank Gold)</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">Python 3</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fa-solid fa-server"></i> Systems &amp; Tools</h3>
+                        <div class="tag-cloud">
+                            <span class="tag">Systems Programming (Sockets, Threads, Processes)</span>
+                            <span class="tag">Control Systems / PID</span>
+                            <span class="tag">AWS Cloud</span>
+                            <span class="tag">Git &amp; GitHub</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fa-solid fa-brain"></i> Core Competencies</h3>
+                        <div class="tag-cloud">
+                            <span class="tag">Algorithms &amp; Data Structures</span>
+                            <span class="tag">Probability &amp; Statistics</span>
+                            <span class="tag">Competitive Programming</span>
+                            <span class="tag">Machine Learning Pipelines</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Featured <span>Projects</span></h2>
+                <div class="projects-grid">
+
+                    <!-- Project 1: ROV Control Systems (Private Code Base) -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <i class="fa-solid fa-robot project-icon"></i>
+                            <div class="project-links">
+                                <span class="private-tag" title="Competition code restricted under NDA/Team Rules"><i
+                                        class="fa-solid fa-lock"></i> Private Repo</span>
+                            </div>
+                        </div>
+                        <h3>ROV Control Systems</h3>
+                        <p class="project-subtitle">Robo-Tech | MATE ROV Competition (4th Place Regional)</p>
+                        <p class="project-description">
+                            Architected underwater ROV control systems using Python, Raspberry Pi, and GPIO interfaces.
+                            Implemented real-time motor control and PID feedback algorithms fusing sensor data for
+                            stability, alongside automated safety thruster shutdown logic.
+                        </p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Raspberry Pi</span>
+                            <span>Control Systems</span>
+                            <span>PID</span>
+                            <span>GPIO</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: The Simple Server -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <i class="fa-solid fa-network-wired project-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/Abdelrahman-Rafiq/The-Simple-Server" target="_blank"
+                                    aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>The Simple Server</h3>
+                        <p class="project-subtitle">Concurrent HTTP/1.1 Web Server in C (CS50 Final Project)</p>
+                        <p class="project-description">
+                            Built a concurrent HTTP/1.1 server in C using POSIX Threads &amp; BSD Sockets. Designed an
+                            in-memory byte-bounded LRU cache, a CGI engine using fork/exec and dup2 pipes, and managed
+                            50+ concurrent clients with a thread pool. Valgrind verified.
+                        </p>
+                        <div class="project-tags">
+                            <span>C</span>
+                            <span>POSIX Threads</span>
+                            <span>BSD Sockets</span>
+                            <span>LRU Cache</span>
+                            <span>Valgrind</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="section">
+            <div class="container">
+                <h2 class="section-title">Key <span>Achievements</span></h2>
+                <div class="achievements-grid">
+
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fa-solid fa-trophy"></i></div>
+                        <h3>4th Place Regional</h3>
+                        <p>MATE ROV Competition 2026 with team Robo-Tech, developing real-time control software and PID
+                            stability models.</p>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fa-solid fa-medal"></i></div>
+                        <h3>HackerRank Gold Badge</h3>
+                        <p>Earned Gold Badge in C Programming for demonstrating advanced skill in algorithms, memory
+                            management, and pointers.</p>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fa-solid fa-star"></i></div>
+                        <h3>3.99 / 4.0 GPA</h3>
+                        <p>Maintained near-perfect academic standing in Computer &amp; Communications Engineering at
+                            Alexandria University.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Get In <span>Touch</span></h2>
+                <div class="contact-wrapper">
+
+                    <div class="contact-info">
+                        <h3>Let's collaborate!</h3>
+                        <p>I am actively seeking engineering positions, data science projects, and freelance
+                            opportunities. Feel free to reach out directly.</p>
+
+                        <div class="contact-detail">
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:abdelrahmanrafiq983@gmail.com">abdelrahmanrafiq983@gmail.com</a>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Alexandria, Egypt</span>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://github.com/Abdelrahman-Rafiq" target="_blank" aria-label="GitHub"><i
+                                    class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/abdelrahman-rafiq-939bb034a/" target="_blank"
+                                aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" action="https://formspree.io/f/xbjnqweq" method="POST" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                placeholder="How can I help you?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Abdelrahman Rafiq. All rights reserved.</p>
+            <p class="footer-sub">Designed for systems engineering &amp; data science performance.</p>
         </div>
+    </footer>
 
-        <!-- DEPI -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">In Progress</span>
-            <h3>DEPI Data Science Track</h3>
-            <h4>Digital Egypt Pioneers Initiative</h4>
-            <p>Practical machine learning workflows, data analysis pipelines, and applied statistics models for engineering applications.</p>
-          </div>
-        </div>
-
-        <!-- AWS ML Foundations -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">2026</span>
-            <h3>Machine Learning Foundations</h3>
-            <h4>Amazon Web Services (AWS)</h4>
-            <p>Practical machine learning concepts, data preprocessing, model training workflows, and deployment on AWS infrastructure.</p>
-          </div>
-        </div>
-
-        <!-- AWS Cloud Foundations -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">2026</span>
-            <h3>AWS Cloud Foundations</h3>
-            <h4>Amazon Web Services (AWS)</h4>
-            <p>Fundamentals of cloud architecture, core AWS infrastructure services, security practices, and deployment models.</p>
-          </div>
-        </div>
-
-        <!-- CS50 -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">2026</span>
-            <h3>CS50: Introduction to Computer Science</h3>
-            <h4>Harvard University / edX</h4>
-            <p>Computer science fundamentals, memory management, algorithms, and data structures.</p>
-          </div>
-        </div>
-
-        <!-- Probability & Statistics -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">2025</span>
-            <h3>Probability & Statistics 1</h3>
-            <h4>Arabsera</h4>
-            <p>Mathematical foundations of probability distributions, statistical inference, and hypothesis testing for ML models.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Achievements Section -->
-  <section id="achievements" class="section">
-    <div class="container">
-      <h2 class="section-title"><span class="title-number">05.</span> Achievements & Honors</h2>
-      
-      <div class="achievements-grid">
-        <div class="achievement-card">
-          <div class="achievement-icon">
-            <i class="fa-solid fa-trophy"></i>
-          </div>
-          <div class="achievement-info">
-            <h3>4th Place - Regional MATE ROV 2026</h3>
-            <p>Robo-Tech Team Lead Control Systems Developer. Successfully engineered and executed low-level control systems under competition pressure.</p>
-          </div>
-        </div>
-
-        <div class="achievement-card">
-          <div class="achievement-icon">
-            <i class="fa-solid fa-medal"></i>
-          </div>
-          <div class="achievement-info">
-            <h3>HackerRank Gold Badge in C</h3>
-            <p>Demonstrated top-tier mastery in standard C language programming, memory management, complex data structures, and algorithmic logic.</p>
-          </div>
-        </div>
-
-        <div class="achievement-card">
-          <div class="achievement-icon">
-            <i class="fa-solid fa-star"></i>
-          </div>
-          <div class="achievement-info">
-            <h3>3.99 Academic GPA</h3>
-            <p>Maintained near-perfect academic standing in Computer & Communications Engineering at Alexandria University.</p>
-          </div>
-        </div>
-
-        <div class="achievement-card">
-          <div class="achievement-icon">
-            <i class="fa-solid fa-language"></i>
-          </div>
-          <div class="achievement-info">
-            <h3>B2 English Proficiency</h3>
-            <p>Certified by the Ministry of Defense Language Institute (MODLI) for formal technical writing and oral communications.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section bg-alt">
-    <div class="container text-center">
-      <h2 class="section-title center-title"><span class="title-number">06.</span> Get In Touch</h2>
-      <p class="contact-lead">
-        I am actively seeking data science opportunities, engineering roles, and freelance technical projects. Whether you have a question or an opportunity to discuss, feel free to drop a message!
-      </p>
-
-      <div class="contact-wrapper">
-        <div class="contact-info">
-          <div class="contact-item">
-            <i class="fa-solid fa-envelope"></i>
-            <a href="mailto:abdelrahmanrafiq983@gmail.com">abdelrahmanrafiq983@gmail.com</a>
-          </div>
-          <div class="contact-item">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Alexandria, Egypt</span>
-          </div>
-          <div class="social-links">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/Abdelrahman-Rafiq" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
-          </div>
-        </div>
-
-        <!-- Contact Form (Works via Formspree or simple mailto trigger) -->
-        <form class="contact-form" action="mailto:abdelrahmanrafiq983@gmail.com" method="post" enctype="text/plain">
-          <div class="form-group">
-            <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
-          </div>
-          <div class="form-group">
-            <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email">
-          </div>
-          <div class="form-group">
-            <textarea name="message" rows="5" placeholder="Your Message" required aria-label="Your Message"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container text-center">
-      <p>Designed & Built by Abdelrahman Rafiq &copy; 2026. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- Custom JavaScript -->
-  <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
