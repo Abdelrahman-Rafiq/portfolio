@@ -4,9 +4,21 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0d14" />
     <meta name="description"
-        content="Portfolio of Abdelrahman Rafiq - Computer & Communications Engineering Student & Data Science Specialist" />
-    <title>Abdelrahman Rafiq | Data Science & Engineering Portfolio</title>
+        content="Abdelrahman Rafiq - freelance data science and machine learning: data cleaning, EDA, classification models, SQL pipelines and geospatial visualization. Computer & Communications Engineering student, GPA 3.99." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Abdelrahman Rafiq | Data Science & Machine Learning Freelancer" />
+    <meta property="og:description"
+        content="I turn raw data into reliable machine-learning solutions: data cleaning, EDA, classification models, SQL pipelines and visual analytics." />
+    <title>Abdelrahman Rafiq | Data Science & Machine Learning Freelancer</title>
+
+    <!-- Favicon (inline SVG, no extra file needed) -->
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0d14'/%3E%3Ctext x='50' y='66' font-size='46' font-family='Arial' font-weight='700' text-anchor='middle' fill='%2300f2fe'%3EAR%3C/text%3E%3C/svg%3E" />
+
+    <!-- Marks JS as available so scroll-reveal never hides content when JS is off -->
+    <script>document.documentElement.classList.add('js');</script>
 
     <!-- Google Fonts: Space Grotesk & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,18 +37,20 @@
 <body>
 
     <!-- Navigation -->
-    <header class="navbar">
+    <header class="navbar" id="navbar">
         <div class="container nav-container">
-            <a href="#hero" class="nav-logo">AR<span>.</span></a>
-            <nav class="nav-links" id="navLinks">
-                <a href="#about">About</a>
-                <a href="#education">Education</a>
-                <a href="#skills">Skills</a>
+            <a href="#hero" class="nav-logo" aria-label="Back to top">AR<span>.</span></a>
+            <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+                <a href="#services">Services</a>
                 <a href="#projects">Projects</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
                 <a href="#achievements">Achievements</a>
-                <a href="#contact" class="btn btn-outline-nav">Contact</a>
+                <a href="#contact" class="nav-cta">Hire Me</a>
             </nav>
-            <button class="hamburger" id="hamburger" aria-label="Toggle Navigation">
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
+                aria-controls="navLinks">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
@@ -47,208 +61,267 @@
         <section id="hero" class="hero-section">
             <div class="container hero-container">
                 <div class="hero-content">
-                    <div class="badge"><i class="fa-solid fa-code-branch"></i> Systems Programming &amp; Data Science
-                    </div>
+                    <div class="badge"><span class="pulse-dot"></span> Available for freelance projects</div>
 
-                    <h1 class="hero-title">Abdelrahman Rafiq.</h1>
+                    <p class="hero-name">Abdelrahman Rafiq <span class="dot-separator">•</span> Data Science &amp;
+                        Systems Engineering</p>
 
-                    <div class="hero-subtitle">
-                        <span>Second-Year Computer &amp; Communications Engineer</span>
-                        <span class="dot-separator">•</span>
-                        <span>GPA: 3.99 / 4.0</span>
-                    </div>
+                    <h1 class="hero-title">I turn raw data into <span class="gradient-text">reliable machine-learning
+                            solutions.</span></h1>
 
-                    <!-- <h2 class="hero-tagline">Building a fundamentals-first bridge from low-level systems programming to end-to-end Data Science and Machine Learning.</h2> -->
                     <p class="hero-description">
-                        Building a fundamentals-first bridge from low-level systems programming to end-to-end Data
-                        Science and Machine Learning.
+                        I help startups and small businesses clean, explore and model their data, from messy
+                        spreadsheets to validated classification models, with results explained in plain language.
                     </p>
 
+                    <ul class="hero-points">
+                        <li><i class="fa-solid fa-circle-check"></i> Data cleaning, EDA &amp; ML models</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Tested against a clear success metric</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Python, SQL &amp; scikit-learn</li>
+                    </ul>
+
                     <div class="hero-cta">
-                        <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-briefcase"></i> View My
+                        <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Hire Me</a>
+                        <a href="#projects" class="btn btn-outline"><i class="fa-solid fa-briefcase"></i> View My
                             Work</a>
                         <!-- Resume Link -->
                         <a href="https://drive.google.com/file/d/1nbTvhjvUZzKHQiyKicvZtw58eWrBPkPt/view?usp=sharing"
                             target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i
                                 class="fa-solid fa-file-pdf"></i> Resume</a>
-                        <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-paper-plane"></i> Contact</a>
                     </div>
+
+                    <p class="hero-subtitle">Second-Year Computer &amp; Communications Engineering • Alexandria
+                        University • <span class="nowrap">GPA 3.99 / 4.0</span></p>
+                </div>
+
+                <!-- Snapshot of the featured project -->
+                <aside class="hero-card" aria-label="Featured project snapshot">
+                    <div class="hero-card-bar">
+                        <span class="win-dot"></span><span class="win-dot"></span><span class="win-dot"></span>
+                        <span class="hero-card-file">occupancy_detection.ipynb</span>
+                    </div>
+                    <div class="hero-card-body">
+                        <p class="hero-card-label">Latest project result</p>
+                        <h2 class="hero-card-title">Smart Office Occupancy Detection</h2>
+
+                        <div class="meter">
+                            <div class="meter-top"><span>Client target</span><b>≥ 97%</b></div>
+                            <div class="meter-bar"><span class="meter-fill muted" style="width: 97%"></span></div>
+                        </div>
+                        <div class="meter">
+                            <div class="meter-top"><span>Cross-validation accuracy</span><b>≈ 99.3%</b></div>
+                            <div class="meter-bar"><span class="meter-fill" style="width: 99.3%"></span></div>
+                        </div>
+                        <div class="meter">
+                            <div class="meter-top"><span>Held-out test accuracy</span><b>≈ 99.4%</b></div>
+                            <div class="meter-bar"><span class="meter-fill" style="width: 99.4%"></span></div>
+                        </div>
+
+                        <div class="hero-card-tags">
+                            <span>5 models vs baseline</span>
+                            <span>Stratified 5-fold CV</span>
+                            <span>Time-block validation</span>
+                        </div>
+                        <a href="#projects" class="hero-card-link">See the full case study <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Stats strip -->
+        <section class="stats" aria-label="Highlights">
+            <div class="container stats-grid">
+                <div class="stat">
+                    <div class="stat-value">99.4%</div>
+                    <div class="stat-label">Test accuracy on occupancy detection</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">3.99</div>
+                    <div class="stat-label">GPA out of 4.0 at Alexandria University</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">50+</div>
+                    <div class="stat-label">Concurrent clients on my custom C server</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">4th</div>
+                    <div class="stat-label">Place at the MATE ROV 2026 Regional</div>
                 </div>
             </div>
         </section>
 
-        <!-- About Me Section -->
-        <!-- About Me Section -->
-        <section id="about" class="section">
+        <!-- Services Section -->
+        <section id="services" class="section">
             <div class="container">
-                <h2 class="section-title">About <span>Me</span></h2>
-
-                <div class="about-wrapper">
-                    <!-- Profile Photo -->
-                    <div class="about-image-container">
-                        <img src="assets/profile.jpg" alt="Abdelrahman Rafiq" class="about-image">
-                    </div>
-
-                    <!-- Bio Card -->
-                    <div class="about-card">
-                        <p>
-                            When I first started in Computer Science, I realized quickly that frameworks come and go,
-                            but the underlying computation never changes. I wanted to know what happens beneath the
-                            abstractions.
-                        </p>
-                        <p>
-                            That curiosity led me to C, Harvard's CS50, and data structures—a path that earned me a
-                            HackerRank Gold Medal in C. But theory only matters when put to work. As a control systems
-                            engineer on our Robo-Tech team, I took that low-level mindset to the water, writing
-                            sensor-fusion and PID algorithms under pressure to help us earn 4th Place at the MATE 2026
-                            Regional
-                        </p>
-                        <p>
-                            Today, I'm channeling that same systems-first mindset into Data Science. Through the DEPI
-                            Data Science track and AWS Academy (Cloud & ML Foundations certified), I'm pairing rigorous
-                            mathematics—linear algebra, probability, and calculus—with practical machine learning
-                            pipelines.
-                        </p>
-                        <p>
-                            I don't just chase tools; I build the foundational depth that makes any tool easier to
-                            master—delivering data solutions built to last long after current trends fade.
-                        </p>
-                    </div>
+                <div class="section-head">
+                    <span class="eyebrow">What I do</span>
+                    <h2 class="section-title">Services <span>I Offer</span></h2>
+                    <p class="section-lead">Everything you need to go from raw data to a model or insight you can
+                        trust.</p>
                 </div>
 
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" class="section">
-            <div class="container">
-                <h2 class="section-title"><span>Education</span> &amp; Certifications</h2>
-
-                <div class="timeline">
-                    <!-- Degree -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="date">2024 - 2028</span>
-                            <h3>B.Sc. in Computer &amp; Communications Engineering</h3>
-                            <h4>Faculty of Engineering, Alexandria University | Alexandria, Egypt</h4>
-                            <p><strong>GPA:</strong> 3.99 / 4.0</p>
-                            <p class="desc"><strong>Core Competencies:</strong> Systems Programming, Control Theory,
-                                Algorithms & Data Structures, Applied Statistics.</p>
-                        </div>
+                <div class="services-grid">
+                    <div class="service-card reveal lift">
+                        <div class="service-icon"><i class="fa-solid fa-broom"></i></div>
+                        <h3>Data Cleaning &amp; EDA</h3>
+                        <p>I audit missing values, types, duplicates and class balance, then explore the data with
+                            clear distributions, correlations and visuals that show what actually matters.</p>
                     </div>
 
-                    <!-- DEPI Data Science Track -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="date">In Progress</span>
-                            <h3>DEPI Data Science Track</h3>
-                            <h4>Digital Egypt Pioneers Initiative</h4>
-                            <p class="desc">Practical machine learning workflows, data analysis pipelines, and applied
-                                statistics models for engineering applications.</p>
-                        </div>
+                    <div class="service-card reveal lift">
+                        <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+                        <h3>Machine Learning Models</h3>
+                        <p>Classification pipelines with scaled preprocessing, benchmarked against a baseline using
+                            Logistic Regression, Decision Trees, KNN, SVM and Random Forest, then tuned with grid
+                            search.</p>
                     </div>
 
-                    <!-- CS50 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="date">2026</span>
-                            <h3>CS50: Introduction to Computer Science</h3>
-                            <h4>Harvard / edX</h4>
-                            <p class="desc">Core computer science fundamentals, memory management, algorithms, and data
-                                structures. Built a fully concurrent C web server as a final project.</p>
-                        </div>
+                    <div class="service-card reveal lift">
+                        <div class="service-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                        <h3>Validation &amp; Evaluation</h3>
+                        <p>Stratified and time-block cross-validation, held-out tests, precision / recall / F1 and
+                            permutation importance, so you know how the model behaves on unseen data.</p>
                     </div>
 
-                    <!-- AWS ML Foundations -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="date">2026</span>
-                            <h3>Machine Learning Foundations</h3>
-                            <h4>Amazon Web Services (AWS)</h4>
-                            <p class="desc">Practical machine learning concepts, data preprocessing, model training
-                                workflows, and deployment on AWS infrastructure.</p>
-                        </div>
+                    <div class="service-card reveal lift">
+                        <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+                        <h3>SQL &amp; Data Pipelines</h3>
+                        <p>End-to-end pipelines with Python and pandas, plus PostgreSQL analytical views that turn
+                            raw records into query-ready insight.</p>
                     </div>
 
-                    <!-- AWS Cloud Foundations -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="date">2026</span>
-                            <h3>AWS Cloud Foundations</h3>
-                            <h4>Amazon Web Services (AWS)</h4>
-                            <p class="desc">Fundamentals of cloud architecture, core AWS infrastructure services,
-                                security practices, and cloud deployment models.</p>
-                        </div>
+                    <div class="service-card reveal lift">
+                        <div class="service-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                        <h3>Geospatial &amp; Visual Analytics</h3>
+                        <p>Interactive Folium heatmaps and clean charts that make patterns obvious, even to
+                            non-technical stakeholders.</p>
                     </div>
 
-                    <!-- Probability & Statistics -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="date">2025</span>
-                            <h3>Probability &amp; Statistics 1</h3>
-                            <h4>Arabsera</h4>
-                            <p class="desc">Mathematical foundations of probability distributions, statistical
-                                inference for ML models.</p>
-                        </div>
+                    <div class="service-card reveal lift">
+                        <div class="service-icon"><i class="fa-solid fa-terminal"></i></div>
+                        <h3>Python &amp; Systems Tooling</h3>
+                        <p>Reliable Python and C tooling: concurrent servers, sockets, and Raspberry Pi hardware
+                            control with real-time feedback logic.</p>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="section">
-            <div class="container">
-                <h2 class="section-title">Technical <span>Skills</span></h2>
-                <div class="skills-grid">
-
-                    <div class="skill-category">
-                        <h3><i class="fa-solid fa-code"></i> Languages</h3>
-                        <div class="tag-cloud">
-                            <span class="tag">C (HackerRank Gold)</span>
-                            <span class="tag">C++</span>
-                            <span class="tag">Python 3</span>
-                            <span class="tag">SQL</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3><i class="fa-solid fa-server"></i> Systems &amp; Tools</h3>
-                        <div class="tag-cloud">
-                            <span class="tag">Systems Programming (Sockets, Threads, Processes)</span>
-                            <span class="tag">Control Systems / PID</span>
-                            <span class="tag">AWS Cloud</span>
-                            <span class="tag">Git &amp; GitHub</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3><i class="fa-solid fa-brain"></i> Core Competencies</h3>
-                        <div class="tag-cloud">
-                            <span class="tag">Algorithms &amp; Data Structures</span>
-                            <span class="tag">Probability &amp; Statistics</span>
-                            <span class="tag">Competitive Programming</span>
-                            <span class="tag">Machine Learning Pipelines</span>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="section">
+        <section id="projects" class="section section-alt">
             <div class="container">
-                <h2 class="section-title">Featured <span>Projects</span></h2>
+                <div class="section-head">
+                    <span class="eyebrow">Selected work</span>
+                    <h2 class="section-title">Featured <span>Projects</span></h2>
+                    <p class="section-lead">Real problems, measurable results, each one built end to end.</p>
+                </div>
+
                 <div class="projects-grid">
 
-                    <!-- Project 1: ROV Control Systems (Private Code Base) -->
-                    <div class="project-card">
+                    <!-- Featured: Smart Office Occupancy Detection -->
+                    <article class="project-card project-featured reveal lift">
+                        <div class="featured-main">
+                            <div class="project-header">
+                                <span class="featured-tag"><i class="fa-solid fa-star"></i> Featured Project</span>
+                            </div>
+                            <h3>Smart Office Occupancy Detection</h3>
+                            <p class="project-subtitle">Classification &bull; Business-driven model evaluation</p>
+                            <p class="project-description">
+                                Predicts whether a meeting room is occupied or empty from environmental sensor data
+                                (temperature, humidity, light, CO&#8322;, humidity ratio), so lighting and HVAC can
+                                switch off automatically and save energy.
+                            </p>
+
+                            <ul class="case-list">
+                                <li>
+                                    <span class="case-label">The challenge</span>
+                                    <span class="case-text">A smart-building client required at least 97% accuracy;
+                                        below that, lights would switch off on people in meetings and the system would
+                                        be removed.</span>
+                                </li>
+                                <li>
+                                    <span class="case-label">The approach</span>
+                                    <span class="case-text">Data audit and EDA, then five models compared against a
+                                        majority-class baseline with scaled pipelines and stratified 5-fold CV. The
+                                        best model (KNN) was tuned with grid search and checked with time-block
+                                        validation and permutation importance.</span>
+                                </li>
+                                <li>
+                                    <span class="case-label">The result</span>
+                                    <span class="case-text">About 99.4% test accuracy against the 97% target. Errors
+                                        were analysed by business cost: wrongly &ldquo;empty&rdquo; (lights off on
+                                        people) matters far more than wrongly &ldquo;occupied&rdquo; (wasted
+                                        energy).</span>
+                                </li>
+                            </ul>
+
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>pandas</span>
+                                <span>NumPy</span>
+                                <span>scikit-learn</span>
+                                <span>seaborn</span>
+                                <span>matplotlib</span>
+                            </div>
+
+                            <a href="https://github.com/Abdelrahman-Rafiq/Smart-house-Occupancy-detection"
+                                target="_blank" rel="noopener noreferrer" class="btn btn-primary featured-btn"><i
+                                    class="fa-brands fa-github"></i> View on GitHub</a>
+                        </div>
+
+                        <div class="featured-side">
+                            <div class="metric-grid">
+                                <div class="metric">
+                                    <div class="metric-value">99.4%</div>
+                                    <div class="metric-label">Test accuracy</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">99.3%</div>
+                                    <div class="metric-label">CV accuracy</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">97%</div>
+                                    <div class="metric-label">Client target</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">5</div>
+                                    <div class="metric-label">Models compared</div>
+                                </div>
+                            </div>
+                            <p class="finding"><i class="fa-solid fa-lightbulb"></i> <span>Light is the strongest
+                                    single indicator of occupancy, and CO&#8322; adds complementary signal.</span></p>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: SF Crime Analytics & Interactive Heatmap -->
+                    <article class="project-card reveal lift">
+                        <div class="project-header">
+                            <i class="fa-solid fa-chart-line project-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/Abdelrahman-Rafiq/sf-crime-analytics" target="_blank"
+                                    rel="noopener noreferrer" aria-label="SF Crime Analytics on GitHub"><i
+                                        class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>SF Crime Analytics &amp; Heatmap</h3>
+                        <p class="project-subtitle">Data Engineering &amp; Geospatial Visualization Pipeline</p>
+                        <p class="project-description">
+                            Engineered an end-to-end data processing pipeline for San Francisco police incident data.
+                            Designed PostgreSQL analytical views and generated interactive geospatial heatmaps using
+                            Folium to identify high-density incident patterns.
+                        </p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>PostgreSQL</span>
+                            <span>Pandas</span>
+                            <span>Folium</span>
+                            <span>SQL Views</span>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: ROV Control Systems (Private Code Base) -->
+                    <article class="project-card reveal lift">
                         <div class="project-header">
                             <i class="fa-solid fa-robot project-icon"></i>
                             <div class="project-links">
@@ -270,39 +343,16 @@
                             <span>PID</span>
                             <span>GPIO</span>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Project 2: SF Crime Analytics & Interactive Heatmap -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <i class="fa-solid fa-chart-line project-icon"></i>
-                            <div class="project-links">
-                                <a href="https://github.com/Abdelrahman-Rafiq/sf-crime-analytics" target="_blank"
-                                aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
-                            </div>
-                        </div>
-                        <h3>SF Crime Analytics &amp; Heatmap</h3>
-                        <p class="project-subtitle">Data Engineering &amp; Geospatial Visualization Pipeline</p>
-                        <p class="project-description">
-                            Engineered an end-to-end data processing pipeline for San Francisco police incident data.
-                            Designed PostgreSQL analytical views and generated interactive geospatial heatmaps using
-                            Folium to identify high-density incident patterns.
-                        </p>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>PostgreSQL</span>
-                            <span>Pandas</span>
-                            <span>Folium</span>
-                            <span>SQL Views</span>
-                        </div>
-                    </div>
-                    <!-- Project 3: The Simple Server -->
-                    <div class="project-card">
+                    <!-- Project 4: The Simple Server -->
+                    <article class="project-card reveal lift">
                         <div class="project-header">
                             <i class="fa-solid fa-network-wired project-icon"></i>
                             <div class="project-links">
                                 <a href="https://github.com/Abdelrahman-Rafiq/The-Simple-Server" target="_blank"
-                                    aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                                    rel="noopener noreferrer" aria-label="The Simple Server on GitHub"><i
+                                        class="fa-brands fa-github"></i></a>
                             </div>
                         </div>
                         <h3>The Simple Server</h3>
@@ -319,6 +369,232 @@
                             <span>LRU Cache</span>
                             <span>Valgrind</span>
                         </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">How I work</span>
+                    <h2 class="section-title">A Simple, <span>Clear Process</span></h2>
+                    <p class="section-lead">No guesswork: you always know what is being built and how it is
+                        measured.</p>
+                </div>
+
+                <div class="process-grid">
+                    <div class="process-step reveal">
+                        <div class="step-number">01</div>
+                        <h3>Define the goal</h3>
+                        <p>We agree on the problem and a measurable success metric, like the 97% accuracy target in my
+                            occupancy project.</p>
+                    </div>
+                    <div class="process-step reveal">
+                        <div class="step-number">02</div>
+                        <h3>Audit &amp; explore</h3>
+                        <p>I check data quality, clean it, and explore the patterns that drive the outcome.</p>
+                    </div>
+                    <div class="process-step reveal">
+                        <div class="step-number">03</div>
+                        <h3>Model &amp; validate</h3>
+                        <p>I benchmark several models against a baseline, tune the best one, and test it on data it
+                            has never seen.</p>
+                    </div>
+                    <div class="process-step reveal">
+                        <div class="step-number">04</div>
+                        <h3>Deliver &amp; explain</h3>
+                        <p>You get documented code and a plain-language summary of results, trade-offs and next
+                            steps.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section section-alt">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Who you'll work with</span>
+                    <h2 class="section-title">About <span>Me</span></h2>
+                </div>
+
+                <div class="about-wrapper">
+                    <!-- Profile Photo (falls back to initials if the image is missing) -->
+                    <div class="about-image-container">
+                        <span class="avatar-fallback" aria-hidden="true">AR</span>
+                        <img src="assets/profile.jpg" alt="Abdelrahman Rafiq" class="about-image"
+                            onerror="this.remove()">
+                    </div>
+
+                    <!-- Bio Card -->
+                    <div class="about-card">
+                        <p>
+                            When I first started in Computer Science, I realized quickly that frameworks come and go,
+                            but the underlying computation never changes. I wanted to know what happens beneath the
+                            abstractions.
+                        </p>
+                        <p>
+                            That curiosity led me to C, Harvard's CS50, and data structures, a path that earned me a
+                            HackerRank Gold Badge in C. But theory only matters when put to work. As a control systems
+                            engineer on our Robo-Tech team, I took that low-level mindset to the water, writing
+                            sensor-fusion and PID algorithms under pressure to help us earn 4th Place at the MATE 2026
+                            Regional.
+                        </p>
+                        <p>
+                            Today, I'm channeling that same systems-first mindset into Data Science. Through the DEPI
+                            Data Science track and AWS Academy (Cloud &amp; ML Foundations certified), I'm pairing
+                            rigorous mathematics (linear algebra, probability, and calculus) with practical machine
+                            learning pipelines.
+                        </p>
+                        <p>
+                            I don't just chase tools; I build the foundational depth that makes any tool easier to
+                            master, delivering data solutions built to last long after current trends fade.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Toolbox</span>
+                    <h2 class="section-title">Technical <span>Skills</span></h2>
+                </div>
+
+                <div class="skills-grid">
+
+                    <div class="skill-category reveal">
+                        <h3><i class="fa-solid fa-chart-simple"></i> Data Science &amp; ML</h3>
+                        <div class="tag-cloud">
+                            <span class="tag">pandas</span>
+                            <span class="tag">NumPy</span>
+                            <span class="tag">scikit-learn</span>
+                            <span class="tag">seaborn</span>
+                            <span class="tag">matplotlib</span>
+                            <span class="tag">Folium</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Jupyter</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category reveal">
+                        <h3><i class="fa-solid fa-code"></i> Languages</h3>
+                        <div class="tag-cloud">
+                            <span class="tag">C (HackerRank Gold)</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">Python 3</span>
+                            <span class="tag">SQL</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category reveal">
+                        <h3><i class="fa-solid fa-server"></i> Systems &amp; Tools</h3>
+                        <div class="tag-cloud">
+                            <span class="tag">Systems Programming (Sockets, Threads, Processes)</span>
+                            <span class="tag">Control Systems / PID</span>
+                            <span class="tag">AWS Cloud</span>
+                            <span class="tag">Git &amp; GitHub</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category reveal">
+                        <h3><i class="fa-solid fa-layer-group"></i> Core Competencies</h3>
+                        <div class="tag-cloud">
+                            <span class="tag">Algorithms &amp; Data Structures</span>
+                            <span class="tag">Probability &amp; Statistics</span>
+                            <span class="tag">Competitive Programming</span>
+                            <span class="tag">Machine Learning Pipelines</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section section-alt">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Background</span>
+                    <h2 class="section-title"><span>Education</span> &amp; Certifications</h2>
+                </div>
+
+                <div class="timeline">
+                    <!-- Degree -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="date">2024 - 2028</span>
+                            <h3>B.Sc. in Computer &amp; Communications Engineering</h3>
+                            <h4>Faculty of Engineering, Alexandria University | Alexandria, Egypt</h4>
+                            <p><strong>GPA:</strong> 3.99 / 4.0</p>
+                            <p class="desc"><strong>Core Competencies:</strong> Systems Programming, Control Theory,
+                                Algorithms &amp; Data Structures, Applied Statistics.</p>
+                        </div>
+                    </div>
+
+                    <!-- DEPI Data Science Track -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="date">In Progress</span>
+                            <h3>DEPI Data Science Track</h3>
+                            <h4>Digital Egypt Pioneers Initiative</h4>
+                            <p class="desc">Practical machine learning workflows, data analysis pipelines, and applied
+                                statistics models for engineering applications.</p>
+                        </div>
+                    </div>
+
+                    <!-- CS50 -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="date">2026</span>
+                            <h3>CS50: Introduction to Computer Science</h3>
+                            <h4>Harvard / edX</h4>
+                            <p class="desc">Core computer science fundamentals, memory management, algorithms, and data
+                                structures. Built a fully concurrent C web server as a final project.</p>
+                        </div>
+                    </div>
+
+                    <!-- AWS ML Foundations -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="date">2026</span>
+                            <h3>Machine Learning Foundations</h3>
+                            <h4>Amazon Web Services (AWS)</h4>
+                            <p class="desc">Practical machine learning concepts, data preprocessing, model training
+                                workflows, and deployment on AWS infrastructure.</p>
+                        </div>
+                    </div>
+
+                    <!-- AWS Cloud Foundations -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="date">2026</span>
+                            <h3>AWS Cloud Foundations</h3>
+                            <h4>Amazon Web Services (AWS)</h4>
+                            <p class="desc">Fundamentals of cloud architecture, core AWS infrastructure services,
+                                security practices, and cloud deployment models.</p>
+                        </div>
+                    </div>
+
+                    <!-- Probability & Statistics -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="date">2025</span>
+                            <h3>Probability &amp; Statistics 1</h3>
+                            <h4>Arabsera</h4>
+                            <p class="desc">Mathematical foundations of probability distributions, statistical
+                                inference for ML models.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -327,24 +603,28 @@
         <!-- Achievements Section -->
         <section id="achievements" class="section">
             <div class="container">
-                <h2 class="section-title">Key <span>Achievements</span></h2>
+                <div class="section-head">
+                    <span class="eyebrow">Proof of work</span>
+                    <h2 class="section-title">Key <span>Achievements</span></h2>
+                </div>
+
                 <div class="achievements-grid">
 
-                    <div class="achievement-card">
+                    <div class="achievement-card reveal">
                         <div class="achievement-icon"><i class="fa-solid fa-trophy"></i></div>
                         <h3>4th Place Regional</h3>
                         <p>MATE ROV Competition 2026 with team Robo-Tech, developing real-time control software and PID
                             stability models.</p>
                     </div>
 
-                    <div class="achievement-card">
+                    <div class="achievement-card reveal">
                         <div class="achievement-icon"><i class="fa-solid fa-medal"></i></div>
                         <h3>HackerRank Gold Badge</h3>
                         <p>Earned Gold Badge in C Programming for demonstrating advanced skill in algorithms, memory
                             management, and pointers.</p>
                     </div>
 
-                    <div class="achievement-card">
+                    <div class="achievement-card reveal">
                         <div class="achievement-icon"><i class="fa-solid fa-star"></i></div>
                         <h3>3.99 / 4.0 GPA</h3>
                         <p>Maintained near-perfect academic standing in Computer &amp; Communications Engineering at
@@ -356,15 +636,21 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="section">
+        <section id="contact" class="section section-alt contact-section">
             <div class="container">
-                <h2 class="section-title">Get In <span>Touch</span></h2>
+                <div class="section-head">
+                    <span class="eyebrow">Let's work together</span>
+                    <h2 class="section-title">Get In <span>Touch</span></h2>
+                    <p class="section-lead">Have a dataset, a model to build, or a problem to untangle? Tell me about it
+                        and I'll show you how I can help.</p>
+                </div>
+
                 <div class="contact-wrapper">
 
                     <div class="contact-info">
                         <h3>Let's collaborate!</h3>
-                        <p>I am actively seeking engineering positions, data science projects, and freelance
-                            opportunities. Feel free to reach out directly.</p>
+                        <p>I'm taking on freelance data science projects, and I'm open to engineering positions and
+                            collaborations. Feel free to reach out directly.</p>
 
                         <div class="contact-detail">
                             <i class="fa-solid fa-envelope"></i>
@@ -376,14 +662,18 @@
                         </div>
 
                         <div class="social-links">
-                            <a href="https://github.com/Abdelrahman-Rafiq" target="_blank" aria-label="GitHub"><i
-                                    class="fa-brands fa-github"></i></a>
+                            <a href="https://github.com/Abdelrahman-Rafiq" target="_blank" rel="noopener noreferrer"
+                                aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
                             <a href="https://www.linkedin.com/in/abdelrahman-rafiq-939bb034a/" target="_blank"
-                                aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                                rel="noopener noreferrer" aria-label="LinkedIn"><i
+                                    class="fa-brands fa-linkedin"></i></a>
                         </div>
                     </div>
 
                     <form class="contact-form" action="https://formspree.io/f/mrpgbydq" method="POST" id="contactForm">
+                        <!-- Spam trap: real visitors never see or fill this -->
+                        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off"
+                            aria-hidden="true">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required placeholder="Your Name">
@@ -395,9 +685,11 @@
                         <div class="form-group">
                             <label for="message">Message</label>
                             <textarea id="message" name="message" rows="5" required
-                                placeholder="How can I help you?"></textarea>
+                                placeholder="Tell me about your project..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                        <button type="submit" class="btn btn-primary btn-full" id="submitBtn"><i
+                                class="fa-solid fa-paper-plane"></i> Send Message</button>
+                        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
                     </form>
 
                 </div>
@@ -410,6 +702,7 @@
         <div class="container">
             <p>&copy; 2026 Abdelrahman Rafiq. All rights reserved.</p>
             <p class="footer-sub">Designed for systems engineering &amp; data science performance.</p>
+            <a href="#hero" class="back-top"><i class="fa-solid fa-arrow-up"></i> Back to top</a>
         </div>
     </footer>
 
